@@ -15,12 +15,14 @@ def run():
         "some_floats": [1.1, 4.5, 6.43]
     }
 
-    for key, value in super_dict.items():
-        print(key, "-", value)
-
     for dic in super_list:
-        print([(k, dic[k]) for k in dic])
+        #print([(k, dic[k]) for k in dic])
+        #print ( dic )
+        for key, val in dic.items():
+            print (key, "\t- ", val)
 
+    for key, value in super_dict.items():
+        print(key, "\t-", value)
 
 if __name__ == '__main__':
     run()
