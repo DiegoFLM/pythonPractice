@@ -14,12 +14,11 @@ def divisors(num):
 
 
 def run():
-    try:
-        num = int (input('Type a number: '))
-        print(divisors(num))
-        print ('End of the program')
-    except ValueError:
-        print('Only numbers are allowed')
+    num = input('Type a number: ')
+    assert num.isnumeric() and (int(num) >= 0), 'A non negative number must be introduced'
+    print(divisors(int (num)))
+    print ('End of the program')
+
 
 if __name__ == '__main__':
     run()
